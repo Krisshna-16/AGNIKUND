@@ -1477,6 +1477,95 @@ footer {
   }
 }
 
+/* ---------- Mobile Responsive Enhancements ---------- */
+@media (max-width: 768px) {
+  /* Reduce excessive section heights & vertical padding */
+  .hero-triptych-container, .hero {
+    height: 90vh !important;
+  }
+  
+  .manifesto, 
+  .programs, 
+  .schedule-section, 
+  .membership-section, 
+  .trainers-section, 
+  .gallery-section, 
+  .faq-section {
+    padding: 60px 6vw !important;
+  }
+  
+  .manifesto {
+    min-height: auto !important;
+  }
+
+  .cta {
+    padding: 80px 6vw 60px !important;
+  }
+
+  /* Moderate clamp header sizes to prevent giant text wrapping */
+  .hero h1 {
+    font-size: 3.2rem !important;
+    line-height: 1.1 !important;
+  }
+  
+  .location-badge {
+    font-size: 9px !important;
+    padding: 5px 12px !important;
+    margin-bottom: 16px !important;
+  }
+  
+  .hero p.tagline {
+    font-size: 0.95rem !important;
+    margin-top: 20px !important;
+    line-height: 1.5 !important;
+  }
+  
+  .tagline-himalayas {
+    font-size: 0.85rem !important;
+    margin-top: 6px !important;
+  }
+  
+  .sub-tagline {
+    font-size: 0.8rem !important;
+    margin-top: 10px !important;
+    line-height: 1.5 !important;
+  }
+  
+  .section-head {
+    margin-bottom: 35px !important;
+  }
+  
+  .section-head h2 {
+    font-size: 1.8rem !important;
+  }
+  
+  .manifesto h3 {
+    font-size: 1.5rem !important;
+    line-height: 1.35 !important;
+  }
+  
+  .cta h2 {
+    font-size: 2.0rem !important;
+  }
+
+  /* Make gallery heights smaller on mobile */
+  .gallery-item {
+    height: 220px !important;
+  }
+
+  /* Make pricing cards spacing slightly tighter */
+  .pricing-card {
+    padding: 32px 24px !important;
+  }
+
+  /* Adjust stats strip layout height on mobile absolute position */
+  .stats-strip {
+    height: auto !important;
+    min-height: 150px !important;
+    padding: 15px 4vw !important;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   * {
     animation: none !important;

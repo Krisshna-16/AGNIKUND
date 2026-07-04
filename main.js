@@ -110,16 +110,12 @@ const mainTimeline = gsap.timeline({
   scrollTrigger: {
     trigger: '.hero-triptych-container',
     start: 'top top',
-    end: '+=450%', // 150vh hero zoom + 300vh triptych transitions
+    end: '+=120%', // Pin for 120vh scroll distance
     scrub: 1,
     pin: true,
     pinSpacing: true
   }
 });
-
-// Set initial styles for overlay sections
-gsap.set('.triptych-pin-content', { opacity: 0 });
-gsap.set('.tri-word', { opacity: 0, y: 40 });
 
 if (!isReduced) {
   // Set origin for text zoom
@@ -170,89 +166,22 @@ if (!isReduced) {
     duration: 0.4,
     ease: 'power1.inOut'
   }, 0.8);
-
-  // 6. Reveal triptych: fade in and scale up from 0.9 to 1
-  gsap.set('.triptych-pin-content', { scale: 0.9 });
-  mainTimeline.to('.triptych-pin-content', {
-    opacity: 1,
-    scale: 1,
-    duration: 0.4,
-    ease: 'power2.out',
-    onStart: playStatsCountUp
-  }, 0.8);
-
-  // Draw in Bageshwar ridge foothill line path
-  mainTimeline.to('#ridgePath', {
-    strokeDashoffset: 0,
-    duration: 3.5,
-    ease: 'power1.inOut'
-  }, 0.8);
 } else {
-  // Respect reduced motion: simple crossfade between hero and triptych
+  // Respect reduced motion: simple fade out of hero
   mainTimeline.to('.hero', {
     opacity: 0,
     duration: 0.8,
     ease: 'power1.inOut'
   }, 0);
-
-  mainTimeline.to('.triptych-pin-content', {
-    opacity: 1,
-    duration: 0.8,
-    ease: 'power1.inOut',
-    onStart: playStatsCountUp
-  }, 0.4);
 }
 
-// 7. Spark/Ignite Word 1 Entrance (fully visible right after triptych reveal)
-const triptychStart = 1.2;
-
-mainTimeline.to('#word1', {
-  opacity: 1,
-  y: 0,
-  duration: 0.4,
-  ease: 'power2.out'
-}, triptychStart);
-
-// Hold Word 1
-mainTimeline.to({}, { duration: 0.6 });
-
-// Transition Word 1 -> Word 2
-mainTimeline.to('#word1', {
-  opacity: 0,
-  y: -40,
-  duration: 0.4,
-  ease: 'power2.in'
+/* ---------- Stats Strip Count Up ScrollTrigger ---------- */
+ScrollTrigger.create({
+  trigger: '.stats-strip',
+  start: 'top 85%',
+  onEnter: playStatsCountUp,
+  once: true
 });
-
-// Word 2: FORGE
-mainTimeline.to('#word2', {
-  opacity: 1,
-  y: 0,
-  duration: 0.4,
-  ease: 'power2.out'
-});
-
-// Hold Word 2
-mainTimeline.to({}, { duration: 0.6 });
-
-// Transition Word 2 -> Word 3
-mainTimeline.to('#word2', {
-  opacity: 0,
-  y: -40,
-  duration: 0.4,
-  ease: 'power2.in'
-});
-
-// Word 3: RISE
-mainTimeline.to('#word3', {
-  opacity: 1,
-  y: 0,
-  duration: 0.4,
-  ease: 'power2.out'
-});
-
-// Hold Word 3 at the end
-mainTimeline.to({}, { duration: 0.6 });
 
 /* ---------- Manifesto Line and Paragraph Reveal ---------- */
 gsap.utils.toArray('.reveal-line span').forEach((line, i) => {

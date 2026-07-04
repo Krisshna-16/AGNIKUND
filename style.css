@@ -141,8 +141,8 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: min(400px, 85vw);
-  height: min(400px, 85vw);
+  width: min(600px, 95vw);
+  height: min(600px, 95vw);
   z-index: 1;
   pointer-events: none;
   display: flex;
@@ -158,11 +158,11 @@ body {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  filter: grayscale(100%) contrast(165%) sepia(100%) saturate(300%) hue-rotate(-35deg) brightness(0.72);
+  filter: grayscale(100%) contrast(230%) sepia(100%) saturate(300%) hue-rotate(-35deg) brightness(0.65);
   mix-blend-mode: screen;
   transition: opacity 0.1s ease;
-  mask-image: radial-gradient(circle at center, black 25%, transparent 68%);
-  -webkit-mask-image: radial-gradient(circle at center, black 25%, transparent 68%);
+  mask-image: radial-gradient(circle at center, black 10%, transparent 55%);
+  -webkit-mask-image: radial-gradient(circle at center, black 10%, transparent 55%);
 }
 
 .opacity-0 {

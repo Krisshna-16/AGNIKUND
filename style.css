@@ -148,7 +148,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  opacity: 0.22; /* Visible on home screen initially */
+  opacity: 0.45; /* Visible on home screen initially */
 }
 
 .athlete-img {
@@ -158,7 +158,7 @@ body {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  filter: grayscale(100%) contrast(165%) sepia(100%) saturate(300%) hue-rotate(-35deg) brightness(0.55);
+  filter: grayscale(100%) contrast(165%) sepia(100%) saturate(300%) hue-rotate(-35deg) brightness(0.72);
   mix-blend-mode: screen;
   transition: opacity 0.1s ease;
   mask-image: radial-gradient(circle at center, black 25%, transparent 68%);

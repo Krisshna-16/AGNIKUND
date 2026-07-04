@@ -214,7 +214,7 @@ if (!isReduced) {
   // Set static standing pose for prefers-reduced-motion
   gsap.set('#athleteBottom', { opacity: 0 });
   gsap.set('#athleteTop', { opacity: 1 });
-  gsap.set('.hero-athlete-container', { opacity: 0.22 });
+  gsap.set('.hero-athlete-container', { opacity: 0.45 });
 }
 
 /* ---------- Manifesto Line and Paragraph Reveal ---------- */

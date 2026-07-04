@@ -161,13 +161,6 @@ if (!isReduced) {
   }, 0);
 
   // --- Athlete Deadlift Animation ---
-  // Fade in the athlete container as the wordmark starts expanding
-  mainTimeline.to('.hero-athlete-container', {
-    opacity: 0.22,
-    duration: 0.4,
-    ease: 'power1.out'
-  }, 0.15);
-
   // Fade out athlete container as the wordmark completes zoom and dissolves
   mainTimeline.to('.hero-athlete-container', {
     opacity: 0,

@@ -141,8 +141,8 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: min(320px, 80vw);
-  height: min(320px, 80vw);
+  width: min(400px, 85vw);
+  height: min(400px, 85vw);
   z-index: 1;
   pointer-events: none;
   display: flex;
@@ -151,9 +151,20 @@ body {
   opacity: 0; /* Animated on scroll */
 }
 
-.athlete-svg {
+.athlete-img {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
+  object-fit: contain;
+  filter: grayscale(100%) contrast(140%) sepia(100%) saturate(300%) hue-rotate(-35deg) brightness(0.6);
+  mix-blend-mode: screen;
+  transition: opacity 0.1s ease;
+}
+
+.opacity-0 {
+  opacity: 0;
 }
 
 /* Cool Mist Particles */

@@ -163,7 +163,7 @@ if (!isReduced) {
   // --- Athlete Deadlift Animation ---
   // Fade in the athlete container as the wordmark starts expanding
   mainTimeline.to('.hero-athlete-container', {
-    opacity: 0.25,
+    opacity: 0.22,
     duration: 0.4,
     ease: 'power1.out'
   }, 0.15);
@@ -175,61 +175,18 @@ if (!isReduced) {
     ease: 'power1.in'
   }, 0.85);
 
-  // Morph left leg to standing lockout
-  mainTimeline.to('#legL', {
-    attr: { d: 'M 135 250 L 135 200 L 135 150' },
-    duration: 1.2,
+  // Crossfade images from bottom to top position during the lift phase (middle of the scroll zoom)
+  mainTimeline.to('#athleteBottom', {
+    opacity: 0,
+    duration: 0.5,
     ease: 'power1.inOut'
-  }, 0);
+  }, 0.35);
 
-  // Morph right leg to standing lockout
-  mainTimeline.to('#legR', {
-    attr: { d: 'M 165 250 L 165 200 L 165 150' },
-    duration: 1.2,
+  mainTimeline.to('#athleteTop', {
+    opacity: 1,
+    duration: 0.5,
     ease: 'power1.inOut'
-  }, 0);
-
-  // Translate hips upward
-  mainTimeline.to('#pelvis', {
-    attr: { x1: 135, y1: 150, x2: 165, y2: 150 },
-    duration: 1.2,
-    ease: 'power1.inOut'
-  }, 0);
-
-  // Erect torso standing tall
-  mainTimeline.to('#torso', {
-    attr: { x1: 150, y1: 150, x2: 150, y2: 90 },
-    duration: 1.2,
-    ease: 'power1.inOut'
-  }, 0);
-
-  // Raise head standing tall
-  mainTimeline.to('#head', {
-    attr: { cy: 65 },
-    duration: 1.2,
-    ease: 'power1.inOut'
-  }, 0);
-
-  // Extend left arm
-  mainTimeline.to('#armL', {
-    attr: { x1: 135, y1: 90, x2: 135, y2: 150 },
-    duration: 1.2,
-    ease: 'power1.inOut'
-  }, 0);
-
-  // Extend right arm
-  mainTimeline.to('#armR', {
-    attr: { x1: 165, y1: 90, x2: 165, y2: 150 },
-    duration: 1.2,
-    ease: 'power1.inOut'
-  }, 0);
-
-  // Translate barbell group upward to locked out height
-  mainTimeline.to('#barbellGroup', {
-    y: -70,
-    duration: 1.2,
-    ease: 'power1.inOut'
-  }, 0);
+  }, 0.35);
   // ----------------------------------
 
   // 5. Fade out the hero background gradient
@@ -247,7 +204,7 @@ if (!isReduced) {
     onStart: playStatsCountUp
   }, 0.8);
 } else {
-  // Respect reduced motion: simple crossfade between hero and stats strip
+  // Respect reduced motion: simple fade out of hero
   mainTimeline.to('.hero', {
     opacity: 0,
     duration: 0.8,
@@ -262,14 +219,8 @@ if (!isReduced) {
   }, 0.4);
 
   // Set static standing pose for prefers-reduced-motion
-  gsap.set('#legL', { attr: { d: 'M 135 250 L 135 200 L 135 150' } });
-  gsap.set('#legR', { attr: { d: 'M 165 250 L 165 200 L 165 150' } });
-  gsap.set('#pelvis', { attr: { x1: 135, y1: 150, x2: 165, y2: 150 } });
-  gsap.set('#torso', { attr: { x1: 150, y1: 150, x2: 150, y2: 90 } });
-  gsap.set('#head', { attr: { cy: 65 } });
-  gsap.set('#armL', { attr: { x1: 135, y1: 90, x2: 135, y2: 150 } });
-  gsap.set('#armR', { attr: { x1: 165, y1: 90, x2: 165, y2: 150 } });
-  gsap.set('#barbellGroup', { y: -70 });
+  gsap.set('#athleteBottom', { opacity: 0 });
+  gsap.set('#athleteTop', { opacity: 1 });
   gsap.set('.hero-athlete-container', { opacity: 0.22 });
 }
 

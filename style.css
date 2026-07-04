@@ -308,9 +308,11 @@ nav {
 
 /* ---------- Stats Strip ---------- */
 .stats-strip {
-  position: relative;
+  position: absolute;
+  bottom: 0;
+  left: 0;
   width: 100%;
-  padding: 8vh 4vw;
+  height: 25vh;
   background: var(--panel);
   border-top: 1px solid rgba(239, 230, 217, 0.08);
   border-bottom: 1px solid rgba(239, 230, 217, 0.08);
@@ -318,6 +320,7 @@ nav {
   align-items: center;
   justify-content: center;
   z-index: 10;
+  opacity: 0;
 }
 
 .stats-container {

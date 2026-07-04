@@ -166,22 +166,29 @@ if (!isReduced) {
     duration: 0.4,
     ease: 'power1.inOut'
   }, 0.8);
+
+  // Fade in Stats Strip and count up numbers as hero dissolves
+  mainTimeline.to('.stats-strip', {
+    opacity: 1,
+    duration: 0.4,
+    ease: 'power1.inOut',
+    onStart: playStatsCountUp
+  }, 0.8);
 } else {
-  // Respect reduced motion: simple fade out of hero
+  // Respect reduced motion: simple crossfade between hero and stats strip
   mainTimeline.to('.hero', {
     opacity: 0,
     duration: 0.8,
     ease: 'power1.inOut'
   }, 0);
-}
 
-/* ---------- Stats Strip Count Up ScrollTrigger ---------- */
-ScrollTrigger.create({
-  trigger: '.stats-strip',
-  start: 'top 85%',
-  onEnter: playStatsCountUp,
-  once: true
-});
+  mainTimeline.to('.stats-strip', {
+    opacity: 1,
+    duration: 0.8,
+    ease: 'power1.inOut',
+    onStart: playStatsCountUp
+  }, 0.4);
+}
 
 /* ---------- Manifesto Line and Paragraph Reveal ---------- */
 gsap.utils.toArray('.reveal-line span').forEach((line, i) => {

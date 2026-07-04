@@ -842,8 +842,6 @@ footer {
   }
 }
 
-}
-
 /* ---------- Membership Pricing Section ---------- */
 .membership-section {
   padding: 16vh 8vw;
@@ -851,6 +849,12 @@ footer {
   position: relative;
   background: var(--panel);
   border-top: 1px solid rgba(239, 230, 217, 0.08);
+}
+
+.membership-container {
+  max-width: 1084px;
+  margin: 0 auto;
+  width: 100%;
 }
 
 .pricing-grid {

@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>AGNIKUND — Forge Your Fire</title>
+  
+  <!-- Premium Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;800;900&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Ember particle field -->
+  <div id="embers"></div>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <div class="logo-mark">AGNI<span>KUND</span></div>
+    <a href="#join" class="nav-cta">Enter</a>
+  </nav>
+
+  <!-- Combined Hero Zoom-Through & Triptych Section -->
+  <div class="hero-triptych-container">
+    <!-- Hero Section -->
+    <section class="hero">
+      <!-- Mountain SVG background -->
+      <div class="mountain-bg">
+        <svg viewBox="0 0 1440 320" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 240 L180 190 L360 230 L540 160 L720 220 L900 170 L1080 210 L1260 150 L1440 220 V320 H0 Z" fill="#050403"/>
+          <path d="M0 260 L240 220 L480 255 L720 195 L960 240 L1200 210 L1440 250 V320 H0 Z" fill="#080604"/>
+        </svg>
+      </div>
+
+      <div class="location-badge">⛰ BAGESHWAR, UTTARAKHAND · 1,100M</div>
+      <div class="eyebrow" id="eyebrow">EST. IN FLAME</div>
+      <h1 id="heroTitle"><span class="fill">AGNIKUND</span></h1>
+      <p class="tagline" id="tagline">
+        Fire doesn't rest, and neither should your work.<br>
+        <span class="tagline-himalayas">Trained in the Himalayan foothills, where the mornings are cold enough to test you before the first rep.</span>
+      </p>
+      <p class="sub-tagline" id="subTagline">
+        At the confluence of the Saryu and Gomti rivers, surrounded by silent pine forests, we build a heat that city gyms can't replicate.
+      </p>
+      <div class="scroll-cue">Scroll</div>
+    </section>
+
+    <!-- Pinned Triptych Overlay -->
+    <div class="triptych-pin-content">
+      <!-- Ridge SVG background -->
+      <div class="ridge-line-container">
+        <svg viewBox="0 0 1440 400" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path id="ridgePath" d="M0 250 Q180 180 360 270 T720 200 T1080 260 T1440 210" stroke="rgba(255, 90, 31, 0.18)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1500" stroke-dashoffset="1500"/>
+        </svg>
+      </div>
+
+      <!-- Stats Strip Section -->
+      <div class="stats-strip">
+        <div class="stats-container">
+          <div class="stat-item">
+            <div class="stat-val" id="stat-trained">0+</div>
+            <div class="stat-label">Members Trained</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-val">BEST</div>
+            <div class="stat-label">IN THE AREA</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-val" id="stat-disc">0</div>
+            <div class="stat-label">Disciplines</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-val" id="stat-fire">0</div>
+            <div class="stat-label">Fire, Always Lit</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tri-word" id="word1">
+        <span class="num">01 — SPARK</span>
+        <h2>IGNITE</h2>
+        <p>Every session starts in the biting 5:45 AM air. When the valley is silent and Bageshwar is still frozen, breaking the cold with the first rep is your first victory.</p>
+        <div class="triptych-subline">5:45 AM · Bageshwar, 6°C</div>
+      </div>
+      <div class="tri-word" id="word2">
+        <span class="num">02 — HEAT</span>
+        <h2>FORGE</h2>
+        <p>Under heavy iron and absolute focus. Far from city noise, you work in the quiet grit of the mountain foothills. Repetition, strain, and no place to hide.</p>
+        <div class="triptych-subline">1,100M · Himalayan foothills</div>
+      </div>
+      <div class="tri-word" id="word3">
+        <span class="num">03 — RESULT</span>
+        <h2>RISE</h2>
+        <p>Step back out into the open valley, your lungs clear, your body tempered. You finish where the Saryu meets the Gomti—not just done, but rebuilt.</p>
+        <div class="triptych-subline">sessions logged, not skipped.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Manifesto Section -->
+  <section class="manifesto">
+    <div class="manifesto-inner">
+      <h3>
+        <span class="reveal-line"><span>Fire doesn't ask for permission.</span></span>
+        <span class="reveal-line"><span>It <span class="glow">consumes</span> what's weak</span></span>
+        <span class="reveal-line"><span>and tempers what remains.</span></span>
+      </h3>
+      <p>Most gyms sell you motivation that burns out by February. We build training around the one force that doesn't need reminding to keep going — heat, applied consistently, over years, not weeks.</p>
+    </div>
+  </section>
+
+  <!-- Programs Showcase Section -->
+  <section class="programs">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow-inline">The Programs</div>
+        <h2>Four ways to feed the fire</h2>
+      </div>
+      <p>Pick a discipline, or move between all four — the kund doesn't care which door you walk in through.</p>
+    </div>
+    <div class="program-grid">
+      <!-- Card 1: Strength -->
+      <div class="program-card">
+        <div class="program-image-wrapper">
+          <img src="assets/program_strength.png" alt="Strength Program - Iron & Load" class="program-img">
+        </div>
+        <div class="program-card-content">
+          <div class="idx">STRENGTH</div>
+          <h4>Iron & Load</h4>
+          <p>Barbell-first programming built around squat, pull, and press. Slow progress, permanently kept.</p>
+        </div>
+      </div>
+      <!-- Card 2: Conditioning -->
+      <div class="program-card">
+        <div class="program-image-wrapper">
+          <img src="assets/program_conditioning.png" alt="Conditioning Program - The Bellows" class="program-img">
+        </div>
+        <div class="program-card-content">
+          <div class="idx">CONDITIONING</div>
+          <h4>The Bellows</h4>
+          <p>Engine work for people who want to move hard for longer than three minutes at a time.</p>
+        </div>
+      </div>
+      <!-- Card 3: Combat -->
+      <div class="program-card">
+        <div class="program-image-wrapper">
+          <img src="assets/program_combat.png" alt="Combat Program - Close Quarters" class="program-img">
+        </div>
+        <div class="program-card-content">
+          <div class="idx">COMBAT</div>
+          <h4>Close Quarters</h4>
+          <p>Striking and grappling fundamentals, taught the way they're meant to be tested — with a partner.</p>
+        </div>
+      </div>
+      <!-- Card 4: Recovery -->
+      <div class="program-card">
+        <div class="program-image-wrapper">
+          <img src="assets/program_recovery.png" alt="Recovery Program - Cooling Bay" class="program-img">
+        </div>
+        <div class="program-card-content">
+          <div class="idx">RECOVERY</div>
+          <h4>Cooling Bay</h4>
+          <p>Mobility, breathwork, and the unglamorous maintenance that lets you keep showing up.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Schedule Section -->
+  <section class="schedule-section">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow-inline">Weekly Schedule</div>
+        <h2>Show up when the fire's lit.</h2>
+      </div>
+      <p>Classes run throughout the week, catering to all disciplines. Plan your fuel.</p>
+    </div>
+
+    <!-- Timetable Grid (Desktop View) -->
+    <div class="timetable-desktop-wrapper">
+      <table class="timetable">
+        <thead>
+          <tr>
+            <th>Time</th>
+            <th>Mon</th>
+            <th>Tue</th>
+            <th>Wed</th>
+            <th>Thu</th>
+            <th>Fri</th>
+            <th>Sat</th>
+            <th>Sun</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="time-col">Morning<br><span>06:30 AM</span></td>
+            <td><span class="class-tag tag-strength">Strength</span></td>
+            <td><span class="class-tag tag-strength">Strength</span></td>
+            <td><span class="class-tag tag-strength">Strength</span></td>
+            <td><span class="class-tag tag-strength">Strength</span></td>
+            <td><span class="class-tag tag-strength">Strength</span></td>
+            <td><span class="class-tag tag-recovery">Recovery</span></td>
+            <td><span class="class-tag tag-open">Open Gym</span></td>
+          </tr>
+          <tr>
+            <td class="time-col">Afternoon<br><span>12:30 PM</span></td>
+            <td><span class="class-tag tag-conditioning">Conditioning</span></td>
+            <td><span class="class-tag tag-recovery">Recovery</span></td>
+            <td><span class="class-tag tag-conditioning">Conditioning</span></td>
+            <td><span class="class-tag tag-recovery">Recovery</span></td>
+            <td><span class="class-tag tag-conditioning">Conditioning</span></td>
+            <td><span class="class-tag tag-strength">Strength</span></td>
+            <td class="class-closed">—</td>
+          </tr>
+          <tr>
+            <td class="time-col">Evening<br><span>07:00 PM</span></td>
+            <td><span class="class-tag tag-zumba">Zumba</span></td>
+            <td><span class="class-tag tag-combat">Combat</span></td>
+            <td><span class="class-tag tag-zumba">Zumba</span></td>
+            <td><span class="class-tag tag-combat">Combat</span></td>
+            <td><span class="class-tag tag-zumba">Zumba</span></td>
+            <td class="class-closed">—</td>
+            <td class="class-closed">—</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Timetable Accordion (Mobile View) -->
+    <div class="timetable-mobile-wrapper">
+      <!-- Monday Accordion -->
+      <div class="accordion-item active">
+        <div class="accordion-header">
+          <span>Monday</span>
+          <span class="accordion-icon">+</span>
+        </div>
+        <div class="accordion-content">
+          <div class="mobile-class-row">
+            <span class="mobile-time">06:30 AM</span>
+            <span class="class-tag tag-strength">Strength</span>
+          </div>
+          <div class="mobile-class-row">
+            <span class="mobile-time">12:30 PM</span>
+            <span class="class-tag tag-conditioning">Conditioning</span>
+          </div>
+          <div class="mobile-class-row">
+            <span class="mobile-time">07:00 PM</span>
+            <span class="class-tag tag-zumba">Zumba</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Tuesday Accordion -->
+      <div class="accordion-item">
+        <div class="accordion-header">
+          <span>Tuesday</span>
+          <span class="accordion-icon">+</span>
+        </div>
+        <div class="accordion-content">
+          <div class="mobile-class-row">
+            <span class="mobile-time">06:30 AM</span>
+            <span class="class-tag tag-strength">Strength</span>
+          </div>
+          <div class="mobile-class-row">
+            <span class="mobile-time">12:30 PM</span>
+            <span class="class-tag tag-recovery">Recovery</span>
+          </div>
+          <div class="mobile-class-row">
+            <span class="mobile-time">07:00 PM</span>
+            <span class="class-tag tag-combat">Combat</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Wednesday Accordion -->
+      <div class="accordion-item">
+        <div class="accordion-header">
+          <span>Wednesday</span>
+          <span class="accordion-icon">+</span>
+        </div>
+        <div class="accordion-content">
+          <div class="mobile-class-row">
+            <span class="mobile-time">06:30 AM</span>
+            <span class="class-tag tag-strength">Strength</span>
+          </div>
+          <div class="mobile-class-row">
+            <span class="mobile-time">12:30 PM</span>
+            <span class="class-tag tag-conditioning">Conditioning</span>
+          </div>
+          <div class="mobile-class-row">
+            <span class="mobile-time">07:00 PM</span>
+            <span class="class-tag tag-zumba">Zumba</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Thursday Accordion -->
+      <div class="accordion-item">
+        <div class="accordion-header">
+          <span>Thursday</span>
+          <span class="accordion-icon">+</span>
+        </div>
+        <div class="accordion-content">
+          <div class="mobile-class-row">
+            <span class="mobile-time">06:30 AM</span>
+            <span class="class-tag tag-strength">Strength</span>
+          </div>
+          <div class="mobile-class-row">
+            <span class="mobile-time">12:30 PM</span>
+            <span class="class-tag tag-recovery">Recovery</span>
+          </div>
+          <div class="mobile-class-row">
+            <span class="mobile-time">07:00 PM</span>
+            <span class="class-tag tag-combat">Combat</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Friday Accordion -->
+      <div class="accordion-item">
+        <div class="accordion-header">
+          <span>Friday</span>
+          <span class="accordion-icon">+</span>
+        </div>
+        <div class="accordion-content">
+          <div class="mobile-class-row">
+            <span class="mobile-time">06:30 AM</span>
+            <span class="class-tag tag-strength">Strength</span>
+          </div>
+          <div class="mobile-class-row">
+            <span class="mobile-time">12:30 PM</span>
+            <span class="class-tag tag-conditioning">Conditioning</span>
+          </div>
+          <div class="mobile-class-row">
+            <span class="mobile-time">07:00 PM</span>
+            <span class="class-tag tag-zumba">Zumba</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Saturday Accordion -->
+      <div class="accordion-item">
+        <div class="accordion-header">
+          <span>Saturday</span>
+          <span class="accordion-icon">+</span>
+        </div>
+        <div class="accordion-content">
+          <div class="mobile-class-row">
+            <span class="mobile-time">08:00 AM</span>
+            <span class="class-tag tag-recovery">Recovery</span>
+          </div>
+          <div class="mobile-class-row">
+            <span class="mobile-time">01:00 PM</span>
+            <span class="class-tag tag-strength">Strength</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sunday Accordion -->
+      <div class="accordion-item">
+        <div class="accordion-header">
+          <span>Sunday</span>
+          <span class="accordion-icon">+</span>
+        </div>
+        <div class="accordion-content">
+          <div class="mobile-class-row">
+            <span class="mobile-time">09:00 AM</span>
+            <span class="class-tag tag-open">Open Gym</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Membership Pricing Section -->
+  <section class="membership-section">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow-inline">Membership</div>
+        <h2>Pick your intensity.</h2>
+      </div>
+      <p>Select the tier that feeds your training goals. No contracts, cancel anytime.</p>
+    </div>
+
+    <div class="pricing-grid">
+      <!-- Tier 1: Basic -->
+      <div class="pricing-card">
+        <div class="pricing-header">
+          <span class="tier-name">Basic</span>
+          <div class="price-container">
+            <span class="currency">₹</span>
+            <span class="price-val">1,999</span>
+            <span class="period">/mo</span>
+          </div>
+          <p class="tier-desc">Core training essentials for self-driven lifters.</p>
+        </div>
+        <div class="pricing-features">
+          <div class="feature-item">
+            <svg class="check-icon" viewBox="0 0 24 24"><path d="M20 6L9 17L4 12" stroke="var(--ember)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+            <span>Full gym floor access</span>
+          </div>
+          <div class="feature-item">
+            <svg class="check-icon" viewBox="0 0 24 24"><path d="M20 6L9 17L4 12" stroke="var(--ember)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+            <span>Standard lockers & showers</span>
+          </div>
+          <div class="feature-item">
+            <svg class="check-icon" viewBox="0 0 24 24"><path d="M20 6L9 17L4 12" stroke="var(--ember)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+            <span>Free orientation session</span>
+          </div>
+          <div class="feature-item">
+            <svg class="check-icon" viewBox="0 0 24 24"><path d="M20 6L9 17L4 12" stroke="var(--ember)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+            <span>1 guest pass per month</span>
+          </div>
+        </div>
+        <div class="pricing-footer">
+          <a href="#" class="pricing-btn">Get Started</a>
+        </div>
+      </div>
+
+      <!-- Tier 2: Pro (Featured) -->
+      <div class="pricing-card featured">
+        <div class="popular-badge">Most Popular</div>
+        <div class="pricing-header">
+          <span class="tier-name">Pro</span>
+          <div class="price-container">
+            <span class="currency">₹</span>
+            <span class="price-val">3,499</span>
+            <span class="period">/mo</span>
+          </div>
+          <p class="tier-desc">Complete access for group training and community energy.</p>
+        </div>
+        <div class="pricing-features">
+          <div class="feature-item">
+            <svg class="check-icon" viewBox="0 0 24 24"><path d="M20 6L9 17L4 12" stroke="var(--ember)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+            <span>All Basic tier benefits</span>
+          </div>
+          <div class="feature-item">
+            <svg class="check-icon" viewBox="0 0 24 24"><path d="M20 6L9 17L4 12" stroke="var(--ember)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+            <span>Unlimited group classes (Zumba, Conditioning)</span>
+          </div>
+          <div class="feature-item">
+            <svg class="check-icon" viewBox="0 0 24 24"><path d="M20 6L9 17L4 12" stroke="var(--ember)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+            <span>Access to combat sparring ring</span>
+          </div>
+          <div class="feature-item">
+            <svg class="check-icon" viewBox="0 0 24 24"><path d="M20 6L9 17L4 12" stroke="var(--ember)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+            <span>5 guest passes per month</span>
+          </div>
+          <div class="feature-item">
+            <svg class="check-icon" viewBox="0 0 24 24"><path d="M20 6L9 17L4 12" stroke="var(--ember)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+            <span>10% discount on in-house café</span>
+          </div>
+        </div>
+        <div class="pricing-footer">
+          <a href="#" class="pricing-btn featured-btn">Forge Your Plan</a>
+        </div>
+      </div>
+
+      <!-- Tier 3: Elite -->
+      <div class="pricing-card">
+        <div class="pricing-header">
+          <span class="tier-name">Elite</span>
+          <div class="price-container">
+            <span class="currency">₹</span>
+            <span class="price-val">5,999</span>
+            <span class="period">/mo</span>
+          </div>
+          <p class="tier-desc">Uncompromised support: personal coaching & advanced recovery.</p>
+        </div>
+        <div class="pricing-features">
+          <div class="feature-item">
+            <svg class="check-icon" viewBox="0 0 24 24"><path d="M20 6L9 17L4 12" stroke="var(--ember)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+            <span>All Pro tier benefits</span>
+          </div>
+          <div class="feature-item">
+            <svg class="check-icon" viewBox="0 0 24 24"><path d="M20 6L9 17L4 12" stroke="var(--ember)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+            <span>4 Personal training sessions/mo</span>
+          </div>
+          <div class="feature-item">
+            <svg class="check-icon" viewBox="0 0 24 24"><path d="M20 6L9 17L4 12" stroke="var(--ember)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+            <span>Unlimited recovery lounge & saunas</span>
+          </div>
+          <div class="feature-item">
+            <svg class="check-icon" viewBox="0 0 24 24"><path d="M20 6L9 17L4 12" stroke="var(--ember)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+            <span>Custom diet & workout programming</span>
+          </div>
+          <div class="feature-item">
+            <svg class="check-icon" viewBox="0 0 24 24"><path d="M20 6L9 17L4 12" stroke="var(--ember)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+            <span>Complimentary laundry service</span>
+          </div>
+        </div>
+        <div class="pricing-footer">
+          <a href="#" class="pricing-btn">Get Started</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trainers Showcase Section -->
+  <section class="trainers-section">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow-inline">The Trainers</div>
+        <h2>Every discipline. Someone who's lived it.</h2>
+      </div>
+      <div class="ambient-loop-container">
+        <div class="loop-text-wrapper">
+          <div class="loop-item">Strength</div>
+          <div class="loop-item">Zumba</div>
+          <div class="loop-item">Combat</div>
+          <div class="loop-item">Recovery</div>
+          <div class="loop-item">Strength</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="trainers-carousel-wrapper">
+      <div class="trainers-carousel">
+        <!-- Trainer Card 1: Strength -->
+        <div class="trainer-card glow-strength" data-tilt>
+          <div class="avatar-wrapper bg-strength">
+            <span class="avatar-initials">VS</span>
+          </div>
+          <div class="trainer-info">
+            <span class="trainer-tag">Strength & Powerlifting</span>
+            <h4>Vikram Singh</h4>
+            <p>15 years under the barbell. Specialized in structural strength development and competitive powerlifting coaching.</p>
+          </div>
+        </div>
+
+        <!-- Trainer Card 2: Zumba -->
+        <div class="trainer-card glow-zumba" data-tilt>
+          <div class="avatar-wrapper bg-zumba">
+            <span class="avatar-initials">AK</span>
+          </div>
+          <div class="trainer-info">
+            <span class="trainer-tag tag-zumba">Zumba & Dance Fitness</span>
+            <h4>Ananya Kapoor</h4>
+            <p>Bringing rhythm, high intensity, and infectious energy to burn through endurance barriers. Certified Zumba instructor.</p>
+          </div>
+        </div>
+
+        <!-- Trainer Card 3: Combat -->
+        <div class="trainer-card glow-combat" data-tilt>
+          <div class="avatar-wrapper bg-combat">
+            <span class="avatar-initials">RK</span>
+          </div>
+          <div class="trainer-info">
+            <span class="trainer-tag">Combat Conditioning</span>
+            <h4>Rohan Kadyan</h4>
+            <p>Former national kickboxer. Merging striking drills with military-grade metabolic conditioning.</p>
+          </div>
+        </div>
+
+        <!-- Trainer Card 4: Recovery -->
+        <div class="trainer-card glow-recovery" data-tilt>
+          <div class="avatar-wrapper bg-recovery">
+            <span class="avatar-initials">SM</span>
+          </div>
+          <div class="trainer-info">
+            <span class="trainer-tag">Mobility & Recovery</span>
+            <h4>Sarah Marcus</h4>
+            <p>Physiotherapist and yoga practitioner. Dedicated to joint longevity, breath control, and rebuilding active movement.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section class="gallery-section">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow-inline">Inside the Kund</div>
+        <h2>The space, the sweat, the fire.</h2>
+      </div>
+      <p>A glimpse into the crucible. Take a walk through our training yards.</p>
+    </div>
+
+    <div class="gallery-carousel-wrapper">
+      <div class="gallery-carousel">
+        
+        <!-- Slot 1 -->
+        <div class="gallery-item w-320">
+          <div class="gallery-img-container">
+            <div class="gallery-placeholder bg-grade-1">
+              <span class="gallery-label">Photo: Strength Floor</span>
+            </div>
+            <div class="gallery-overlay"></div>
+          </div>
+        </div>
+
+        <!-- Slot 2 (Wide) -->
+        <div class="gallery-item w-480">
+          <div class="gallery-img-container">
+            <div class="gallery-placeholder bg-grade-2">
+              <span class="gallery-label">Photo: Bellows Conditioning</span>
+            </div>
+            <div class="gallery-overlay"></div>
+          </div>
+        </div>
+
+        <!-- Slot 3 -->
+        <div class="gallery-item w-360">
+          <div class="gallery-img-container">
+            <div class="gallery-placeholder bg-grade-3">
+              <span class="gallery-label">Photo: Combat Sparring</span>
+            </div>
+            <div class="gallery-overlay"></div>
+          </div>
+        </div>
+
+        <!-- Slot 4 -->
+        <div class="gallery-item w-300">
+          <div class="gallery-img-container">
+            <div class="gallery-placeholder bg-grade-4">
+              <span class="gallery-label">Photo: Cooling Bay</span>
+            </div>
+            <div class="gallery-overlay"></div>
+          </div>
+        </div>
+
+        <!-- Slot 5 -->
+        <div class="gallery-item w-420">
+          <div class="gallery-img-container">
+            <div class="gallery-placeholder bg-grade-5">
+              <span class="gallery-label">Photo: Zumba Energy</span>
+            </div>
+            <div class="gallery-overlay"></div>
+          </div>
+        </div>
+
+        <!-- Slot 6 -->
+        <div class="gallery-item w-350">
+          <div class="gallery-img-container">
+            <div class="gallery-placeholder bg-grade-1">
+              <span class="gallery-label">Photo: Iron Platform</span>
+            </div>
+            <div class="gallery-overlay"></div>
+          </div>
+        </div>
+
+        <!-- Slot 7 (Wide) -->
+        <div class="gallery-item w-460">
+          <div class="gallery-img-container">
+            <div class="gallery-placeholder bg-grade-2">
+              <span class="gallery-label">Photo: Midnight Session</span>
+            </div>
+            <div class="gallery-overlay"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq-section">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow-inline">Before You Walk In</div>
+        <h2>Questions, answered straight.</h2>
+      </div>
+      <p>Clear facts, no marketing fluff. Everything you need to know before stepping onto the floor.</p>
+    </div>
+
+    <div class="faq-accordion">
+      <!-- Item 1 -->
+      <div class="faq-item">
+        <div class="faq-header">
+          <span>Do I need prior experience?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-content">
+          <p>No. Every program scales from absolute beginner to competitive athlete. Our coaches adapt the movements to match your current physical capacity.</p>
+        </div>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="faq-item">
+        <div class="faq-header">
+          <span>Is there a trial class?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-content">
+          <p>Yes. You can book a free introductory session using the action button below to test our equipment, meet the crew, and experience a workout.</p>
+        </div>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="faq-item">
+        <div class="faq-header">
+          <span>What should I bring on day one?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-content">
+          <p>Bring comfortable training apparel, clean indoor athletic shoes, and water. We supply fresh workout towels and hydration refill stations.</p>
+        </div>
+      </div>
+
+      <!-- Item 4 -->
+      <div class="faq-item">
+        <div class="faq-header">
+          <span>Is Zumba included in every membership?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-content">
+          <p>No. Zumba and other group classes are exclusive to Pro and Elite tiers. The Basic tier is dedicated purely to independent gym floor training.</p>
+        </div>
+      </div>
+
+      <!-- Item 5 -->
+      <div class="faq-item">
+        <div class="faq-header">
+          <span>Can I switch between programs?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-content">
+          <p>Yes. Your training focus can evolve. You are free to pivot between Strength, Conditioning, and Combat tracks in coordination with your coach.</p>
+        </div>
+      </div>
+
+      <!-- Item 6 -->
+      <div class="faq-item">
+        <div class="faq-header">
+          <span>What if I miss a scheduled class?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-content">
+          <p>You can catch up on missed sessions during open gym hours or reschedule your slot. Inform your coach ahead of time to coordinate.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA / Action Section -->
+  <section class="cta" id="join">
+    <h2>The kund is lit<br>every morning at 5AM.</h2>
+    <a href="#" class="join-btn">Book a free session</a>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div>AGNIKUND — Est. 2024</div>
+    <div>Open daily, 5AM – 11PM</div>
+    <div>Sector 29, Gurugram</div>
+  </footer>
+
+  <!-- GSAP Core and ScrollTrigger Script Libraries -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <!-- Main Choreography script -->
+  <script src="main.js"></script>
+</body>
+</html>

@@ -1370,11 +1370,16 @@ footer {
   position: absolute;
   left: -15%;
   top: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), filter 0.6s ease;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
   will-change: transform;
+}
+
+.gallery-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), filter 0.6s ease;
+  filter: grayscale(60%) contrast(115%) sepia(30%) saturate(140%) brightness(0.68) hue-rotate(-10deg);
 }
 
 .gallery-label {
@@ -1390,13 +1395,6 @@ footer {
   padding: 0 20px;
 }
 
-/* Tonal ember gradients */
-.bg-grade-1 { background: linear-gradient(135deg, #110d08, #22160d, #161109); }
-.bg-grade-2 { background: linear-gradient(135deg, #161009, #2d180b, #0b0906); }
-.bg-grade-3 { background: linear-gradient(135deg, #0b0906, #1d1109, #1a120b); }
-.bg-grade-4 { background: linear-gradient(135deg, #18120c, #2b1c11, #130f0a); }
-.bg-grade-5 { background: linear-gradient(135deg, #1c100a, #351a0d, #14100c); }
-
 /* Warm dark grade overlay */
 .gallery-overlay {
   position: absolute;
@@ -1405,15 +1403,19 @@ footer {
   opacity: 0.85;
   transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1);
   pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Hover effects */
-.gallery-item:hover .gallery-placeholder {
+.gallery-item:hover img {
   transform: scale(1.05); /* Scales slightly on hover */
+  filter: grayscale(35%) contrast(120%) sepia(15%) saturate(150%) brightness(0.85); /* Bring out some color on hover */
 }
 
 .gallery-item:hover .gallery-overlay {
-  opacity: 0.35; /* Fades down to reveal placeholder details */
+  opacity: 0.35; /* Fades down to reveal image details */
 }
 
 .gallery-item:hover .gallery-label {

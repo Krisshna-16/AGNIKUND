@@ -120,7 +120,7 @@ const mainTimeline = gsap.timeline({
   scrollTrigger: {
     trigger: '.hero-triptych-container',
     start: 'top top',
-    end: '+=120%', // Pin for 120vh scroll distance
+    end: '+=70%', // Reduced pin duration for snappier transitions
     scrub: 1,
     pin: true,
     pinSpacing: true

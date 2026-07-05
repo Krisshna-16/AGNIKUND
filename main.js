@@ -50,12 +50,22 @@ if (emberField) {
 }
 
 /* ---------- Hero Load-in Animation Timeline ---------- */
-gsap.timeline({ defaults: { ease: 'power3.out' } })
+const loadTimeline = gsap.timeline({ defaults: { ease: 'power3.out' } });
+loadTimeline
   .to('.location-badge', { opacity: 1, duration: 0.8, delay: 0.2 })
   .to('#eyebrow', { opacity: 1, duration: 0.8 }, '-=0.6')
   .to('#heroTitle', { duration: 1.2, '--stroke': 1 }, '-=0.6')
   .to('#tagline', { opacity: 1, duration: 1 }, '-=0.8')
   .to('#subTagline', { opacity: 0.7, duration: 1 }, '-=0.8');
+
+// Instantly complete and kill the load-in timeline on first scroll to prevent styling conflicts with ScrollTrigger
+const killLoadTimeline = () => {
+  if (loadTimeline.isActive()) {
+    loadTimeline.progress(1).kill();
+  }
+};
+window.addEventListener('scroll', killLoadTimeline, { once: true, passive: true });
+window.addEventListener('touchmove', killLoadTimeline, { once: true, passive: true });
 
 /* ---------- Combined Hero Zoom-Through & Triptych ScrollTrigger ---------- */
 const isReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;

@@ -325,68 +325,7 @@ if (slider) {
   });
 }
 
-/* ---------- Schedule Grid Hover Dimming Interaction ---------- */
-const timetable = document.querySelector('.timetable');
-if (timetable) {
-  const cells = timetable.querySelectorAll('tbody td:not(.time-col)');
-  cells.forEach(cell => {
-    cell.addEventListener('mouseenter', () => {
-      const colIndex = cell.cellIndex;
-      const row = cell.parentElement;
-      
-      timetable.classList.add('dimmed');
-      
-      const allCells = timetable.querySelectorAll('tbody td');
-      allCells.forEach(c => {
-        const cColIndex = c.cellIndex;
-        const cRow = c.parentElement;
-        
-        if (cRow === row || cColIndex === colIndex) {
-          c.classList.add('active-hover');
-        } else {
-          c.classList.remove('active-hover');
-        }
-      });
-    });
-    
-    cell.addEventListener('mouseleave', () => {
-      timetable.classList.remove('dimmed');
-      const allCells = timetable.querySelectorAll('tbody td');
-      allCells.forEach(c => {
-        c.classList.remove('active-hover');
-      });
-    });
-  });
-}
 
-/* ---------- Mobile Schedule Accordion Toggles ---------- */
-const accordionItems = document.querySelectorAll('.timetable-mobile-wrapper .accordion-item');
-accordionItems.forEach(item => {
-  const header = item.querySelector('.accordion-header');
-  header.addEventListener('click', () => {
-    const isActive = item.classList.contains('active');
-    
-    // Close other items
-    accordionItems.forEach(i => i.classList.remove('active'));
-    
-    // Toggle clicked item
-    if (!isActive) {
-      item.classList.add('active');
-    }
-  });
-});
-
-/* ---------- Schedule Section Fade-in ScrollTrigger ---------- */
-gsap.from('.schedule-section', {
-  opacity: 0,
-  y: 30,
-  duration: 1.0,
-  ease: 'power2.out',
-  scrollTrigger: {
-    trigger: '.schedule-section',
-    start: 'top 85%'
-  }
-});
 
 /* ---------- Membership Section Entrance & Tab Logic ---------- */
 // 1. Entrance animation for the pricing selector and card

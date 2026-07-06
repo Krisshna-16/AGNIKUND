@@ -388,17 +388,72 @@ gsap.from('.schedule-section', {
   }
 });
 
-/* ---------- Membership Pricing Cards Staggered Rise-in ---------- */
-gsap.utils.toArray('.pricing-card').forEach((card, i) => {
-  gsap.from(card, {
-    opacity: 0,
-    y: 35,
-    duration: 0.8,
-    delay: i * 0.10,
-    ease: 'power2.out',
-    scrollTrigger: {
-      trigger: '.membership-section',
-      start: 'top 85%'
+/* ---------- Membership Section Entrance & Tab Logic ---------- */
+// 1. Entrance animation for the pricing selector and card
+gsap.from('.pricing-tabs-wrapper', {
+  opacity: 0,
+  y: 20,
+  duration: 0.8,
+  ease: 'power2.out',
+  scrollTrigger: {
+    trigger: '.membership-section',
+    start: 'top 85%'
+  }
+});
+
+gsap.from('.pricing-table-card', {
+  opacity: 0,
+  y: 30,
+  duration: 0.8,
+  delay: 0.15,
+  ease: 'power2.out',
+  scrollTrigger: {
+    trigger: '.membership-section',
+    start: 'top 85%'
+  }
+});
+
+// 2. Tab switching logic with smooth GSAP crossfade
+const pricingTabs = document.querySelectorAll('.pricing-tab');
+pricingTabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    if (tab.classList.contains('active')) return;
+
+    const targetTab = tab.getAttribute('data-tab');
+
+    // Update active tab button classes
+    pricingTabs.forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+
+    // Crossfade tables
+    const activeTable = document.querySelector('.pricing-table.active');
+    const targetTable = document.getElementById(`table-${targetTab}`);
+
+    if (activeTable && targetTable) {
+      // Fade out current table
+      gsap.to(activeTable, {
+        opacity: 0,
+        y: -10,
+        duration: 0.2,
+        ease: 'power1.in',
+        onComplete: () => {
+          activeTable.classList.remove('active');
+          activeTable.style.display = 'none';
+
+          // Position target table for entry
+          targetTable.style.display = 'block';
+          gsap.set(targetTable, { opacity: 0, y: 10 });
+          targetTable.classList.add('active');
+
+          // Fade in target table
+          gsap.to(targetTable, {
+            opacity: 1,
+            y: 0,
+            duration: 0.3,
+            ease: 'power2.out'
+          });
+        }
+      });
     }
   });
 });

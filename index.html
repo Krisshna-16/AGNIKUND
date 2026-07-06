@@ -365,120 +365,109 @@
         <p>Select the tier that feeds your training goals. No contracts, cancel anytime.</p>
       </div>
 
-      <div class="pricing-grid">
-      <!-- Tier 1: Basic -->
-      <div class="pricing-card">
-        <div class="pricing-header">
-          <span class="tier-name">Basic</span>
-          <div class="price-container">
-            <span class="currency">₹</span>
-            <span class="price-val">1,999</span>
-            <span class="period">/mo</span>
-          </div>
-          <p class="tier-desc">Core training essentials for self-driven lifters.</p>
-        </div>
-        <div class="pricing-features">
-          <div class="feature-item">
-            <svg class="check-icon" viewBox="0 0 24 24"><path d="M20 6L9 17L4 12" stroke="var(--ember)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
-            <span>Full gym floor access</span>
-          </div>
-          <div class="feature-item">
-            <svg class="check-icon" viewBox="0 0 24 24"><path d="M20 6L9 17L4 12" stroke="var(--ember)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
-            <span>Standard lockers & showers</span>
-          </div>
-          <div class="feature-item">
-            <svg class="check-icon" viewBox="0 0 24 24"><path d="M20 6L9 17L4 12" stroke="var(--ember)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
-            <span>Free orientation session</span>
-          </div>
-          <div class="feature-item">
-            <svg class="check-icon" viewBox="0 0 24 24"><path d="M20 6L9 17L4 12" stroke="var(--ember)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
-            <span>1 guest pass per month</span>
-          </div>
-        </div>
-        <div class="pricing-footer">
-          <a href="#" class="pricing-btn">Get Started</a>
+      <div class="pricing-tabs-wrapper">
+        <div class="pricing-tabs">
+          <button class="pricing-tab active" data-tab="gym">Gym</button>
+          <button class="pricing-tab" data-tab="family">Family & Couple</button>
+          <button class="pricing-tab" data-tab="student">Student</button>
+          <button class="pricing-tab" data-tab="yoga">Yoga & Zumba</button>
         </div>
       </div>
 
-      <!-- Tier 2: Pro (Featured) -->
-      <div class="pricing-card featured">
-        <div class="popular-badge">Most Popular</div>
-        <div class="pricing-header">
-          <span class="tier-name">Pro</span>
-          <div class="price-container">
-            <span class="currency">₹</span>
-            <span class="price-val">3,499</span>
-            <span class="period">/mo</span>
+      <div class="pricing-table-card">
+        <div class="pricing-tables-container">
+          
+          <!-- Table 1: Gym -->
+          <div class="pricing-table active" id="table-gym" style="opacity: 1; display: block;">
+            <div class="pricing-rows">
+              <div class="pricing-row">
+                <span class="pricing-duration">1 Month</span>
+                <span class="pricing-price">₹1,500</span>
+              </div>
+              <div class="pricing-row">
+                <span class="pricing-duration">3 Month</span>
+                <span class="pricing-price">₹4,500</span>
+              </div>
+              <div class="pricing-row">
+                <span class="pricing-duration">6 Month</span>
+                <span class="pricing-price">₹9,000</span>
+              </div>
+              <div class="pricing-row best-value">
+                <span class="pricing-duration">12 Month</span>
+                <span class="pricing-price">₹18,000</span>
+              </div>
+            </div>
+            <div class="pricing-note">* ID card compulsory, per person.</div>
           </div>
-          <p class="tier-desc">Complete access for group training and community energy.</p>
-        </div>
-        <div class="pricing-features">
-          <div class="feature-item">
-            <svg class="check-icon" viewBox="0 0 24 24"><path d="M20 6L9 17L4 12" stroke="var(--ember)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
-            <span>All Basic tier benefits</span>
-          </div>
-          <div class="feature-item">
-            <svg class="check-icon" viewBox="0 0 24 24"><path d="M20 6L9 17L4 12" stroke="var(--ember)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
-            <span>Unlimited group classes (Zumba, Conditioning)</span>
-          </div>
-          <div class="feature-item">
-            <svg class="check-icon" viewBox="0 0 24 24"><path d="M20 6L9 17L4 12" stroke="var(--ember)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
-            <span>Access to combat sparring ring</span>
-          </div>
-          <div class="feature-item">
-            <svg class="check-icon" viewBox="0 0 24 24"><path d="M20 6L9 17L4 12" stroke="var(--ember)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
-            <span>5 guest passes per month</span>
-          </div>
-          <div class="feature-item">
-            <svg class="check-icon" viewBox="0 0 24 24"><path d="M20 6L9 17L4 12" stroke="var(--ember)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
-            <span>10% discount on in-house café</span>
-          </div>
-        </div>
-        <div class="pricing-footer">
-          <a href="#" class="pricing-btn featured-btn">Forge Your Plan</a>
-        </div>
-      </div>
 
-      <!-- Tier 3: Elite -->
-      <div class="pricing-card">
-        <div class="pricing-header">
-          <span class="tier-name">Elite</span>
-          <div class="price-container">
-            <span class="currency">₹</span>
-            <span class="price-val">5,999</span>
-            <span class="period">/mo</span>
+          <!-- Table 2: Family & Couple -->
+          <div class="pricing-table" id="table-family" style="opacity: 0; display: none;">
+            <div class="pricing-rows">
+              <div class="pricing-row">
+                <span class="pricing-duration">1 Month</span>
+                <span class="pricing-price">₹1,400</span>
+              </div>
+              <div class="pricing-row">
+                <span class="pricing-duration">3 Month</span>
+                <span class="pricing-price">₹4,200</span>
+              </div>
+              <div class="pricing-row">
+                <span class="pricing-duration">6 Month</span>
+                <span class="pricing-price">₹8,400</span>
+              </div>
+              <div class="pricing-row best-value">
+                <span class="pricing-duration">12 Month</span>
+                <span class="pricing-price">₹16,800</span>
+              </div>
+            </div>
+            <div class="pricing-note">* ID card compulsory.</div>
           </div>
-          <p class="tier-desc">Uncompromised support: personal coaching & advanced recovery.</p>
+
+          <!-- Table 3: Student -->
+          <div class="pricing-table" id="table-student" style="opacity: 0; display: none;">
+            <div class="pricing-rows">
+              <div class="pricing-row">
+                <span class="pricing-duration">1 Month</span>
+                <span class="pricing-price">₹1,300</span>
+              </div>
+              <div class="pricing-row">
+                <span class="pricing-duration">3 Month</span>
+                <span class="pricing-price">₹3,900</span>
+              </div>
+              <div class="pricing-row">
+                <span class="pricing-duration">6 Month</span>
+                <span class="pricing-price">₹7,800</span>
+              </div>
+              <div class="pricing-row best-value">
+                <span class="pricing-duration">12 Month</span>
+                <span class="pricing-price">₹15,600</span>
+              </div>
+            </div>
+            <div class="pricing-note">* Up to age 23 only.</div>
+          </div>
+
+          <!-- Table 4: Yoga & Zumba -->
+          <div class="pricing-table" id="table-yoga" style="opacity: 0; display: none;">
+            <div class="pricing-rows">
+              <div class="pricing-row">
+                <span class="pricing-duration">1 Month</span>
+                <span class="pricing-price">₹1,000</span>
+              </div>
+              <div class="pricing-row">
+                <span class="pricing-duration">3 Month</span>
+                <span class="pricing-price">₹3,000</span>
+              </div>
+            </div>
+            <div class="pricing-note">* Access to dedicated Yoga & Zumba studio sessions.</div>
+          </div>
+
         </div>
-        <div class="pricing-features">
-          <div class="feature-item">
-            <svg class="check-icon" viewBox="0 0 24 24"><path d="M20 6L9 17L4 12" stroke="var(--ember)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
-            <span>All Pro tier benefits</span>
-          </div>
-          <div class="feature-item">
-            <svg class="check-icon" viewBox="0 0 24 24"><path d="M20 6L9 17L4 12" stroke="var(--ember)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
-            <span>4 Personal training sessions/mo</span>
-          </div>
-          <div class="feature-item">
-            <svg class="check-icon" viewBox="0 0 24 24"><path d="M20 6L9 17L4 12" stroke="var(--ember)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
-            <span>Unlimited recovery lounge & saunas</span>
-          </div>
-          <div class="feature-item">
-            <svg class="check-icon" viewBox="0 0 24 24"><path d="M20 6L9 17L4 12" stroke="var(--ember)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
-            <span>Custom diet & workout programming</span>
-          </div>
-          <div class="feature-item">
-            <svg class="check-icon" viewBox="0 0 24 24"><path d="M20 6L9 17L4 12" stroke="var(--ember)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
-            <span>Complimentary laundry service</span>
-          </div>
-        </div>
-        <div class="pricing-footer">
-          <a href="#" class="pricing-btn">Get Started</a>
+
+        <div style="margin-top: 36px;">
+          <a href="#" class="pricing-btn" id="pricing-cta-btn">Forge Your Plan</a>
         </div>
       </div>
-    </div>
-  </div>
-</section>
+  </section>
 
   <!-- Trainers Showcase Section -->
   <section class="trainers-section">
